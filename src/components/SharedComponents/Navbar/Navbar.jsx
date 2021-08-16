@@ -19,7 +19,7 @@ const Navbar = () => {
                         >About</a>
                         <a className="mb-5 md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="#contact"
                         >Contact</a>
-                        <a className="mb-5 md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="#admin"
+                        <a className="mb-5 md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="/admin"
                         >Admin Panel</a>
                     </div>
                 </div>
