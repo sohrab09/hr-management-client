@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <section className="headerSection">
+        <section id="home" className="headerSection">
             <div className="headerCover flex justify-center items-center">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold text-white">HR <span className="fontColor">Management</span></h1>

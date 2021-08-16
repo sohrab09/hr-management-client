@@ -13,13 +13,13 @@ const Navbar = () => {
                 <a className="text-2xl font-bold" href="/">HR <span className="fontColor">Management</span></a>
                 <div>
                     <div className="md:block" id={toggle ? "toggleDisplay" : "toggleNone"}>
-                        <a className="md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="/"
+                        <a className="md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="#home"
                         >Home</a>
-                        <a className="md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="/"
+                        <a className="md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="#about"
                         >About</a>
-                        <a className="mb-5 md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="/"
+                        <a className="mb-5 md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="#contact"
                         >Contact</a>
-                        <a className="mb-5 md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="/"
+                        <a className="mb-5 md:ml-12 font-bold text-gray-500 md:text-base 2xl:text-lg hover:text-black" href="#admin"
                         >Admin Panel</a>
                     </div>
                 </div>
