@@ -1,6 +1,23 @@
 import React from 'react';
+import { useState } from 'react';
+import Axios from "axios";
 
 const SingleEmployee = () => {
+
+    const [firstName, setFirstName] = useState(" ");
+    const [lastName, setLastName] = useState(" ");
+    const [email, setEmail] = useState(" ");
+
+    const handleSubmit = () => {
+        Axios.post("http://localhost:5000/api/insert", {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+        }).then(() => {
+            alert("Successfully Inserted To Database");
+        });
+    };
+
     return (
         <div className="md:ml-64">
             <div className="md:py-20 md:bg-gray-200 flex items-center justify-center">
@@ -11,24 +28,36 @@ const SingleEmployee = () => {
                         className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-b-2 border-black" 
                         type="text"
                         placeholder="First Name"
+                        name="firstName"
                         required=""
+                        onChange={(e) =>{
+                            setFirstName(e.target.value)
+                        }}
                         /> 
                         <br />
                         <input 
                         className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-b-2 border-black" 
                         type="text"
                         placeholder="Last Name"
+                        name="lastName"
                         required=""
+                        onChange={(e) =>{
+                            setLastName(e.target.value)
+                        }}
                         />
                         <br />
                         <input 
                         className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-b-2 border-black" 
                         type="text" 
                         placeholder="Email Address"
+                        name="email"
                         required=""
+                        onChange={(e) =>{
+                            setEmail(e.target.value)
+                        }}
                         /> 
                         <br />
-                        <input className="w-4/6 mt-5 bg-black rounded-lg py-2 text-white text-lg font-bold submitBtn" type="submit" />
+                        <button className="w-4/6 mt-5 bg-black rounded-lg py-2 text-white text-lg font-bold submitBtn" onClick={handleSubmit}> SUBMIT</button>
                     </form>
                 </div>
             </div>
