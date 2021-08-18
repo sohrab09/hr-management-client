@@ -10,22 +10,22 @@ export const SidebarData = [
     },
     {
         title: "Add Single Employee",
-        path: '/singleEmployee',
+        path: '/admin/singleEmployee',
         icon: <FontAwesomeIcon icon={faUserPlus} />
     },
     {
         title: "Add Multiple Employee",
-        path: '/multipleEmployee',
+        path: '/admin/multipleEmployee',
         icon: <FontAwesomeIcon icon={faUsers} />
     },
     {
         title: 'Employee List',
-        path: '/employeeList',
+        path: '/admin/employeeList',
         icon: <FontAwesomeIcon icon={faList} />
     },
     {
         title: 'Send Email',
-        path: '/sendMail',
+        path: '/admin/sendMail',
         icon: <FontAwesomeIcon icon={faAt} />
     }
 ]

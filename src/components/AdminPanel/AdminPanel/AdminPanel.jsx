@@ -1,10 +1,10 @@
 import React from 'react';
-import AdminSidebar from '../AdminSidebar/AdminSidebar/AdminSidebar'
+import Sidebar from '../AdminSidebar/Sidebar/Sidebar';
 
 const AdminPanel = () => {
     return (
         <div>
-            <AdminSidebar />
+            <Sidebar />
         </div>
     );
 };
