@@ -1,6 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import{ init } from 'emailjs-com';
+import { init } from 'emailjs-com';
 
 const SendMail = () => {
 
@@ -10,13 +10,14 @@ const SendMail = () => {
         e.preventDefault();
 
         emailjs.sendForm(
-            'service_gtchehr', 
-            'template_orp54ii', 
-            e.target, 
+            'service_gtchehr',
+            'template_orp54ii',
+            e.target,
             'user_eb5YZ0AkpQNVa0I5okrQ5'
-            ).then(res => {
-                console.log(res);
-            }).catch(err => console.log(err));
+        ).then(res => {
+            alert("Mail send successfully")
+            console.log(res);
+        }).catch(err => console.log(err));
     }
 
 
@@ -27,26 +28,27 @@ const SendMail = () => {
                     <h1 className="text-center text-4xl text-green-300 font-bold font-serif">Send Email</h1>
                     <form className="w-full flex items-center flex-col mt-5 md:mt-10" onSubmit={sendEmail}>
                         <input
-                        className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-2 border-green-200" 
-                        type="email"
-                        placeholder="User Email Address"
-                        name="user_email"
-                        required
-                        /> 
+                            className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-2 border-green-200"
+                            type="email"
+                            placeholder="User Email Address"
+                            name="user_email"
+                            required
+                        />
                         <br />
                         <input
-                        className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-2 border-green-200" 
-                        type="text"
-                        placeholder="Email Subject"
-                        name="subject"
-                        required
-                        /> 
+                            className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-2 border-green-200"
+                            type="text"
+                            placeholder="Email Subject"
+                            name="subject"
+                            required
+                        />
                         <br />
-                        <textarea className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-2 border-green-200"  
-                        name="message"
-                        placeholder="Email Body"
-                        rows="5"
-                        required
+                        <textarea
+                            className="w-10/12 md:w-4/6 py-1 px-1 outline-none bg-transparent placeholder-black border-2 border-green-200"
+                            name="message"
+                            placeholder="Email Body"
+                            rows="5"
+                            required
                         >
                         </textarea>
                         <br />
