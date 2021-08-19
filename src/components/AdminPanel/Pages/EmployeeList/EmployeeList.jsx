@@ -1,15 +1,18 @@
 import React from 'react';
 import Axios from "axios";
 
-
 class EmployeeList extends React.Component {
     componentDidMount() {
         this.loadData();
     }
-    
+
     constructor(props) {
         super(props);
         this.state = { allEmployeeList: [] };
+        if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        }
     }
 
     loadData() {
